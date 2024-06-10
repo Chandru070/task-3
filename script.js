@@ -4,8 +4,11 @@ const message = document.getElementById('alert-msg')
 
 function addTask() {
     if(inputBox.value.trim() === "") {
-        // message.style.display = "block"
-        alert("This is an alert message!");
+        Swal.fire({
+            icon: "error",
+            title: "Invalid",
+            text: "Please Enter a Task Name",
+          })
     }
     else{
         let li = document.createElement('li')
